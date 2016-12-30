@@ -18,7 +18,7 @@ func alphabetise(hash uint64) string {
 	return string(ret)
 }
 
-// Hash creates an 11 letter hash of the given string.
-func Hash(s string) string {
+// New creates an 11 letter hash of the given string.
+func New(s string) string {
 	return alphabetise(murmur3.Sum64([]byte(s)))
 }
